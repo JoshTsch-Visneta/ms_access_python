@@ -1,6 +1,6 @@
 from constants import *
 
-conn = pyodbc.connect('Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ='+DB_PATH+';')
+conn = pyodbc.connect('Driver={'+DB_DRIVER+'};DBQ='+DB_PATH+';')
 cursor = conn.cursor()
 cursor.tables()
 rows = cursor.fetchall()
